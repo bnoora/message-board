@@ -21,6 +21,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
   const { author, message } = req.body;
+  if (!author || !message) {
+    res.redirect('/new?error=Please+enter+both+a+name+and+message');
+    return;
+  }
+  
   messages.push({ text: message, user: author, added: new Date() });
   res.redirect('/');
 });
