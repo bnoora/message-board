@@ -1,9 +1,130 @@
+:root {
+  --var-lime-50: #F7FEE7;
+  --var-lime-100: #ECFCCB;
+  --var-lime-200: #D9F99D;
+  --var-lime-300: #BEF264;
+  --var-lime-400: #A3E635;
+  --var-lime-500: #84CC16;
+  --var-lime-600: #65A30D;
+  --var-lime-700: #4D7C0F;
+  --var-lime-800: #3F6212;
+  --var-lime-900: #365314;
+  --var-lime-1000: #2F4E13;
+}
+
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+header {
+  border-bottom: 1px solid var(--var-lime-600);
+  width: 100%;
+  text-align: center;
+  background-color: var(--var-lime-100);
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0.5em 0;
+  font-family: 'Racing Sans One', sans-serif;
+  color: var(--var-lime-800);
+}
+
+section {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, 100px);
+  grid-gap: 2em;
+  border: var(--var-lime-600) 1px solid;
+  border-radius: 15px;
+  margin: 2em 0;
+  padding: 1em 2em;
+  height: 80vh;
+  overflow-y: scroll;
+  background-color: var(--var-lime-50);
+}
+
+.usermsg {
+  border: var(--var-lime-700) 1px solid;
+  border-radius: 15px;
+  padding: 0.5em;
+  min-height: 100px;
+}
+
+.username {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--var-lime-800);
+}
+
+.line {
+  border: 0;
+  height: 2px;
+  background-color: var(--var-lime-600);
+}
+
+#newMsgBtn {
+  border: var(--var-lime-600) 1px solid;
+  border-radius: 15px;
+  padding: 0.5em;
+  min-height: 50px;
+  background-color: var(--var-lime-100);
+  min-width: 100px;
+}
+
+#newMsgBtn:hover {
+  background-color: var(--var-lime-200);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+#userNameInput {
+  border: var(--var-lime-600) 1px solid;
+  border-radius: 15px;
+  padding: 0.5em;
+  background-color: var(--var-lime-100);
+  margin-bottom: 1em;
+}
+
+#userTextInput {
+  border: var(--var-lime-600) 1px solid;
+  border-radius: 15px;
+  padding: 0.5em;
+  background-color: var(--var-lime-100);
+  margin-bottom: 1em;
+  height: 250px;
+  width: 400px;
+}
+
+#sendBtn {
+  border: var(--var-lime-600) 1px solid;
+  border-radius: 15px;
+  padding: 0.5em;
+  min-height: 50px;
+  background-color: var(--var-lime-100);
+  min-width: 100px;
+}
+
+#sendBtn:hover {
+  background-color: var(--var-lime-200);
 }
 

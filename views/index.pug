@@ -5,6 +5,7 @@ block content
   section(id="messages")
     each message in messages
       div(class='usermsg')  
-        div #{message.user}
-        div #{message.text}
+        div(class='username') #{message.user}
+        hr(class='line')
+        div(class='msg') #{message.text}
   button(id="newMsgBtn" onclick="location.href='/new'") New Message
